@@ -1,5 +1,5 @@
-// Pixels to REM
+// Pixels to REM 
 
-@function toRem($value) {
-  @return math.div($value / 16) * 1rem;
+@function rem($pixels, $context: 16) {
+  @return calc($pixels / $context) * 1rem;
 }

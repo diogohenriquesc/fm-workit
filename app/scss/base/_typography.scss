@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+.fs--large {
+  font-size: rem(50);
+
+  @include breakpoint(md) {
+    font-size: rem(60);
+  }
+
+  @include breakpoint(xl) {
+    font-size: rem(80);
+  }
+}
+
+.fs--medium {
+  font-size: rem(32);
+
+  @include breakpoint(md) {
+    font-size: rem(48);
+  }
+
+  @include breakpoint(xl) {
+    font-size: rem(56);
+  }
+}
+
+.fs-small {
+  font-size: rem(28);
+
+  @include breakpoint(xl) {
+    font-size: rem(32);
+  }
+}
+
+body {
+  font-size: rem(16);
+
+  @include breakpoint(xl) {
+    font-size: rem(32);
+  }
+}
