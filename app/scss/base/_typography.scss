@@ -34,8 +34,9 @@
 
 body {
   font-size: rem(16);
+  font-family: $ff-manrope;
 
   @include breakpoint(xl) {
-    font-size: rem(32);
+    font-size: rem(18);
   }
 }

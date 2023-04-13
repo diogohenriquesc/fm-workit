@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: bottom;
+  justify-content: space-between;
+  padding-top: rem(37);
+
+  @include breakpoint(xl) {
+    padding-top: rem(57.78);
+  }
+
+  &__nav {
+    ul {
+      list-style: none;
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+  }
+}

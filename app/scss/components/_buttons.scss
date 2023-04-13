@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+
+.button-cta--1 {
+  position: relative;
+  color: $clr-neutral-3;
+  font-weight: 700;
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: $clr-primary-2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: $clr-primary-2;
+  }
+}
