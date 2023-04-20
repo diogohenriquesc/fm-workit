@@ -1,42 +1,34 @@
 @use '../abstracts' as *;
 
-.fs--large {
-  font-size: rem(50);
+:root {
+  --fs-large: #{rem(50)};
+  --fs-medium: #{rem(32)};
+  --fs-small: #{rem(28)};
+  --fs-body: #{rem(16)};
+  --lh-large: 1;
+  --lh-medium: 1.14;
+  --lh-small: 1.25;
+  --lh-body: 1.78;
+}
 
-  @include breakpoint(md) {
-    font-size: rem(60);
-  }
-
-  @include breakpoint(xl) {
-    font-size: rem(80);
+@include breakpoint(md) {
+  :root {
+    --fs-large: #{rem(60)};
+    --fs-medium: #{rem(48)};
   }
 }
 
-.fs--medium {
-  font-size: rem(32);
-
-  @include breakpoint(md) {
-    font-size: rem(48);
-  }
-
-  @include breakpoint(xl) {
-    font-size: rem(56);
-  }
-}
-
-.fs-small {
-  font-size: rem(28);
-
-  @include breakpoint(xl) {
-    font-size: rem(32);
+@include breakpoint(xl) {
+  :root {
+    --fs-large: #{rem(80)};
+    --fs-medium: #{rem(56)};
+    --fs-small: #{rem(32)};
+    --fs-body: #{rem(18)};
   }
 }
 
 body {
-  font-size: rem(16);
-  font-family: $ff-manrope;
-
-  @include breakpoint(xl) {
-    font-size: rem(18);
-  }
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-family: var(--ff-manrope);
 }

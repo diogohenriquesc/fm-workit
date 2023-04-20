@@ -9,6 +9,7 @@
   align-items: bottom;
   justify-content: space-between;
   padding-top: rem(37);
+  z-index: 2;
 
   @include breakpoint(xl) {
     padding-top: rem(57.78);
