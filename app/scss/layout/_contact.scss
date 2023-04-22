@@ -1,0 +1,86 @@
+@use '../abstracts/' as *;
+
+.contact {
+  padding-block: rem(100) rem(74);
+
+  @include breakpoint(md) {
+    padding-bottom: rem(80);
+  }
+
+  &__img {
+    max-width: rem(281);
+    margin-inline: auto;
+    margin-bottom: rem(-52);
+    z-index: -1;
+
+    @include breakpoint(md) {
+      margin-right: 100%;
+      margin-bottom: rem(-130);
+    }
+
+    @include breakpoint(xl) {
+      max-width: rem(477);
+      margin-bottom: rem(-304);
+    }
+  }
+
+  &__text {
+    position: relative;
+    background-color: var(--clr-primary-1);
+    padding: rem(32);
+    text-align: center;
+    color: var(--clr-neutral-3);
+
+    @include breakpoint(md) {
+      padding: rem(48) rem(56) rem(56);
+      max-width: rem(514);
+      margin-left: auto;
+      text-align: left;
+    }
+
+    @include breakpoint(xl) {
+      padding: rem(64);
+      max-width: rem(730);
+    }
+  }
+
+  &__title {
+    font-family: var(--ff-fraunces);
+    font-size: var(--fs-medium);
+    line-height: var(--lh-medium);
+    margin-bottom: rem(16);
+
+    @include breakpoint(md) {
+      margin-bottom: rem(24);
+    }
+
+    @include breakpoint(xl) {
+      margin-bottom: rem(32);
+    }
+  }
+
+  &__description {
+    margin-bottom: rem(24);
+
+    @include breakpoint(xl) {
+      margin-bottom: rem(32);
+    }
+  }
+
+  &__pattern {
+    display: none;
+
+    @include breakpoint(md) {
+      display: block;
+      position: absolute;
+      right: rem(12);
+      top: 100%;
+      transform: translateY(-50%);
+    }
+
+    @include breakpoint(xl) {
+      right: rem(72);
+      transform: translateY(-71%);
+    }
+  }
+}
