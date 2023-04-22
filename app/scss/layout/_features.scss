@@ -1,0 +1,91 @@
+@use '../abstracts/' as *;
+
+.features {
+  padding-block: rem(155) rem(71);
+  background-color: var(--clr-neutral-2);
+  border-radius: 0% 1% 50% 50% / 0% 0% 5% 5%;
+
+  @include breakpoint(md) {
+    padding-block: rem(203) rem(103);
+  }
+
+  @include breakpoint(xl) {
+    padding-block: rem(255) rem(217);
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+
+    @include breakpoint(md) {
+      gap: rem(48);
+    }
+
+    @include breakpoint(xl) {
+      flex-direction: row;
+      gap: rem(26);
+    }
+
+  }
+
+  &__item {
+    text-align: center;
+
+    @include breakpoint(md) {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: rem(32);
+    }
+
+    @include breakpoint(xl) {
+      text-align: center;
+      flex-direction: column;
+      flex: 1;
+      gap: 0;
+    }
+  } 
+
+  &__counter {
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: 36px;
+    font-family: var(--ff-fraunces);
+    color: var(--clr-primary-1);
+    padding: rem(5) rem(19.2);
+    border: 1px solid var(--clr-primary-1);
+    width: fit-content;
+    border-radius: 50%;
+    margin-inline: auto;
+    margin-bottom: rem(24);
+
+    @include breakpoint(md) {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(xl) {
+      margin-bottom: rem(56);
+      font-size: rem(24);
+    }
+  }
+
+  &__title {
+    font-family: var(--ff-fraunces);
+    font-size: var(--fs-small);
+    color: var(--clr-primary-1);
+    line-height: var(--lh-small);
+    margin-bottom: rem(16);
+
+    @include breakpoint(xl) {
+      margin-bottom: rem(28);
+    }
+
+  }
+
+  &__description {
+    font-size: var(--fs-body);
+    color: var(--clr-neutral-1);
+  }
+}

@@ -1,13 +1,12 @@
 @use '../abstracts/' as *;
 
 .hero {
-	position: fixed;
-	inset: 0 0 auto 0;
+	position: relative;
 	padding-top: rem(130);
 	padding-bottom: rem(156);
 	text-align: center;
 	background-color: var(--clr-primary-1);
-	border-radius:  0% 1% 50% 50% / 0% 0% 5% 5% ;
+	border-radius: 0% 1% 50% 50% / 0% 0% 5% 5%;
 
 	@include breakpoint(md) {
 		padding-top: rem(122);
@@ -89,7 +88,6 @@
 
 		@include breakpoint(md) {
 			max-width: rem(514);
-			
 		}
 
 		@include breakpoint(xl) {
