@@ -19,7 +19,11 @@
 	}
 
 	&::after {
-		
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: var(--clr-neutral-2);
+		z-index: -1;
 	}
 
 	&__title {
