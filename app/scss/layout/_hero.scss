@@ -18,6 +18,10 @@
 		padding-bottom: rem(326);
 	}
 
+	&::after {
+		
+	}
+
 	&__title {
 		color: var(--clr-neutral-3);
 		font-size: var(--fs-large);
